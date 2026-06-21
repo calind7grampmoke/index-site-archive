@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再次触及 · 爱游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf7f2;
+            color: #2e2b27;
+            font-family: "Georgia", "Noto Serif SC", "宋体", serif;
+            line-height: 1.75;
+            padding: 2rem 1.2rem;
+            max-width: 820px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        /* 文章主线容器 */
+        .essay {
+            background: #fffcf7;
+            padding: 2.8rem 2rem;
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 0 0 1px #ede8e0;
+        }
+
+        /* 开场短句 —— 无衬线，更现代 */
+        .opening {
+            font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+            font-size: 1.4rem;
+            font-weight: 350;
+            letter-spacing: 0.02em;
+            color: #4b3f34;
+            border-left: 4px solid #c8b79b;
+            padding-left: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .opening em {
+            font-style: normal;
+            color: #876b4f;
+            font-weight: 450;
+        }
+
+        /* 承接段落 */
+        p {
+            margin-bottom: 1.4rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        /* 引用块 / 提示框 */
+        .insight {
+            background: #f2ede6;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0;
+            border-radius: 1px;
+            border-left: 4px solid #b7a086;
+            font-size: 0.95rem;
+            color: #3e3731;
+            quotes: "“" "”" "‘" "’";
+        }
+
+        .insight::before {
+            content: "·";
+            display: block;
+            font-size: 1.6rem;
+            line-height: 0.5;
+            color: #9b846b;
+            margin-bottom: 0.2rem;
+        }
+
+        /* 特点列表 —— 依然保持阅读感，不用圆点 */
+        .feature-list {
+            list-style: none;
+            padding: 0.2rem 0 1rem 0;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0 0.5rem 1.2rem;
+            position: relative;
+            border-bottom: 1px dashed #e2d9cf;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #9b846b;
+        }
+
+        .feature-label {
+            font-weight: 550;
+            color: #604d3a;
+            display: inline-block;
+            min-width: 4.5em;
+        }
+
+        /* 温和结尾 + 链接 */
+        .closing {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e3dad0;
+            font-size: 0.98rem;
+        }
+
+        .closing a {
+            color: #624f3a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #bfaa91;
+            font-weight: 500;
+            transition: background 0.15s;
+        }
+
+        .closing a:hover {
+            background: #e8dfd3;
+            text-decoration-color: #624f3a;
+        }
+
+        /* 小字号辅助 */
+        .footnote {
+            font-size: 0.85rem;
+            color: #776b5f;
+            margin-top: 1.8rem;
+            letter-spacing: 0.01em;
+        }
+
+        /* 响应式 */
+        @media (max-width: 560px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+
+            .essay {
+                padding: 1.8rem 1.2rem;
+            }
+
+            .opening {
+                font-size: 1.2rem;
+                padding-left: 1rem;
+            }
+
+            .feature-list li {
+                padding-left: 0.8rem;
+                font-size: 0.95rem;
+            }
+
+            .feature-label {
+                min-width: 3.8em;
+            }
+        }
+
+        @media (min-width: 900px) {
+            body {
+                padding-top: 3.5rem;
+            }
+
+            .essay {
+                padding: 3.5rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="essay">
+
+    <!-- 开场短句 -->
+    <div class="opening">
+        再次打开，<em>仍是同一种信赖</em>。
+    </div>
+
+    <!-- 承接段落：从再次访问、收藏的角度切入 -->
+    <p>
+        过去一年里，我们陆续收到许多回访者的留言。有人把页面保存在书签栏，每次打开游戏库都能快速定位；有人每隔几周回来，只为确认自己关注的作品是否有了新动向。对这些人来说，<a href="https://index-site-aiyouxi.com.cn">爱游戏</a>并不只是一个信息集散地，更像一间随时可以推门进入的阅览室——安静、有序，且始终在更新。
+    </p>
+
+    <p>
+        它不依赖推送，也不制造冗余的提醒。你收藏它，是因为你知道需要时它就在那里。这种“持续在场”而非“频繁打扰”的特质，反而让每次访问都带有明确的目的感。无论是查找某款游戏的发行时间，还是梳理某个系列的作品脉络，你得到的永远是经过筛选的内容，而非泛泛的列表。
+    </p>
+
+    <!-- 引用块 / 提示框：突出收藏与关注的价值 -->
+    <div class="insight">
+        收藏夹里若有一个长期未读的站点，要么它已经停止更新，要么它每一次更新都恰好超越了你上一次的认知。对后者而言，保持关注本身就是一种筛选。
+    </div>
+
+    <!-- 特点列表：信息密度稍高，突出结构与深度 -->
+    <ul class="feature-list">
+        <li><span class="feature-label">作品索引</span> 按系列、开发商、发行年份交叉整理，便于回溯与对比</li>
+        <li><span class="feature-label">版本备注</span> 同一作品的多平台版本、语言差异、更新履历均有独立条目</li>
+        <li><span class="feature-label">评论摘录</span> 每款游戏收录 2–3 则来自不同视角的短评，不预设结论</li>
+        <li><span class="feature-label">时间线</span> 以年表形式呈现重要作品节点，关联同期文化事件</li>
+        <li><span class="feature-label">关注提醒</span> 可订阅特定系列或开发者的更新通知，低频率、高相关</li>
+    </ul>
+
+    <!-- 温和结尾：再次呼应“持续关注” -->
+    <div class="closing">
+        <p>
+            如果你也曾把它加入收藏，或只是偶尔回来看一眼，那么它已经完成了自己最核心的使命：在你需要的时候，提供一个可靠、不打折的参照。今后的内容会继续沿着这个方向生长——更全的补全信息、更细致的版本考证，以及那些容易被主流报道忽略的独立作品。
+        </p>
+        <p>
+            下一次再想起它时，直接去书签里找就好。<br>
+            它一直在那里。
+        </p>
+    </div>
+
+    <!-- 辅助脚注（不喧宾夺主） -->
+    <div class="footnote">
+        · 页面内容基于实际收录结构概述 · 持续迭代中
+    </div>
+
+</div>
+
+</body>
+</html>
