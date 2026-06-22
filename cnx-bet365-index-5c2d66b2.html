@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料索引 · bet365 使用整理说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f4f6;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #1e2023;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-wrap {
+            max-width: 920px;
+            width: 100%;
+        }
+
+        /* 卡片系统 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e3e7eb;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02), 0 6px 16px rgba(0,0,0,0.03);
+            padding: 2rem 2.25rem;
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03), 0 10px 24px rgba(0,0,0,0.04);
+        }
+
+        /* 头部区 */
+        .hero {
+            text-align: left;
+            padding: 2.5rem 2.25rem 2rem 2.25rem;
+            background: #ffffff;
+            border-left: 4px solid #3063a5;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #101214;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .subline {
+            font-size: 1rem;
+            color: #5e6a76;
+            margin-top: 0.25rem;
+            border-bottom: 1px solid #eef1f4;
+            padding-bottom: 1rem;
+        }
+
+        /* 段落内间距 */
+        .card p {
+            margin-bottom: 0.9rem;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 列表 */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1.5rem;
+            margin: 0.75rem 0 0.25rem 0;
+        }
+
+        .feature-list li {
+            flex: 0 0 calc(50% - 1rem);
+            padding-left: 1.2rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: #2b3138;
+        }
+
+        .feature-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #6b7f94;
+            font-weight: 300;
+        }
+
+        /* 场景网格 */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .scenario-item {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 1rem 1.2rem;
+            border: 1px solid #e2e7ed;
+            font-size: 0.9rem;
+        }
+
+        .scenario-item strong {
+            display: block;
+            font-weight: 550;
+            color: #1f2a36;
+            margin-bottom: 0.2rem;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #3063a5;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(48, 99, 165, 0.25);
+            transition: border-color 0.15s ease, color 0.15s ease;
+        }
+
+        a:hover {
+            color: #1d4373;
+            border-bottom-color: #1d4373;
+        }
+
+        /* FAQ 区域 */
+        .faq-item {
+            border-bottom: 1px solid #e9edf2;
+            padding: 1rem 0;
+        }
+
+        .faq-item:first-of-type {
+            padding-top: 0.2rem;
+        }
+
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            color: #1a232e;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-answer {
+            color: #3f4b58;
+            font-size: 0.9rem;
+        }
+
+        /* 提示条 */
+        .note-box {
+            background: #f3f6fa;
+            border-left: 4px solid #3063a5;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0 0.25rem 0;
+            font-size: 0.9rem;
+            color: #2c3b4b;
+        }
+
+        .note-box i {
+            font-style: normal;
+            font-weight: 500;
+            color: #1f2a36;
+        }
+
+        /* 底部极小 */
+        .footer-meta {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8b99a8;
+            margin-top: 0.5rem;
+            padding: 1rem 0 0.2rem 0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+            .card {
+                padding: 1.25rem 1.25rem;
+            }
+            .hero {
+                padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+            }
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+            .feature-list li {
+                flex: 0 0 100%;
+            }
+            .scenario-grid {
+                grid-template-columns: 1fr;
+            }
+            .faq-item {
+                padding: 0.75rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <!-- Hero 摘要 -->
+        <div class="card hero">
+            <h1>bet365 · 信息整理与使用说明</h1>
+            <div class="subline">基于公开资料与用户反馈整理的索引页，聚焦功能亮点与实际场景</div>
+        </div>
+
+        <!-- 产品亮点卡片 -->
+        <div class="card">
+            <h2 style="font-weight:500; font-size:1.25rem; margin-bottom:0.5rem; color:#1a232e;">▎功能特点摘要</h2>
+            <p>从功能覆盖面与稳定性角度看，<a href="https://cnx-bet365.com">bet365</a> 在同类平台中提供了较完整的赛事选项与实时数据更新。以下为高频被提及的几个特点：</p>
+            <ul class="feature-list">
+                <li>覆盖超过 35 个体育类别，包含主流联赛与区域性赛事</li>
+                <li>直播/即时比分与统计面板同步展示</li>
+                <li>支持多终端同步会话与偏好设置</li>
+                <li>账户资金流转选项相对灵活（依地区合规政策而定）</li>
+                <li>界面信息密度可调节，提供简洁视图与完整视图</li>
+            </ul>
+            <p style="margin-top:0.75rem;">需要留意的是，实际可用功能会受到账户注册所在地法律框架的约束，建议在使用前自行确认当地规定。</p>
+        </div>
+
+        <!-- 使用场景分区 -->
+        <div class="card">
+            <h2 style="font-weight:500; font-size:1.25rem; margin-bottom:0.75rem; color:#1a232e;">▎常见使用场景</h2>
+            <div class="scenario-grid">
+                <div class="scenario-item">
+                    <strong>📋 赛前资料查阅</strong>
+                    很多用户将 <a href="https://cnx-bet365.com">bet365</a> 作为快速查看赛程、赔率变化与历史对阵的参考源，尤其在多联赛并行时。
+                </div>
+                <div class="scenario-item">
+                    <strong>⚡ 实时动态跟踪</strong>
+                    对于正在进行中的比赛，平台提供的动画缩略图与关键事件时间线可以帮助用户在不观看视频时掌握节奏。
+                </div>
+                <div class="scenario-item">
+                    <strong>🧩 多维度筛选</strong>
+                    按照联赛、日期、数据区间筛选赛事，适合需要对比不同市场赔率的整理型用户。
+                </div>
+                <div class="scenario-item">
+                    <strong>📱 移动端辅助</strong>
+                    在手机浏览器或应用中浏览时，布局自适应且保留主要筛选与排序功能，适合通勤或碎片时间浏览。
+                </div>
+            </div>
+        </div>
+
+        <!-- 注意与建议 -->
+        <div class="card">
+            <h2 style="font-weight:500; font-size:1.25rem; margin-bottom:0.5rem; color:#1a232e;">▎使用建议 · 可信但克制</h2>
+            <div class="note-box">
+                <i>🔹 信息核实</i> —— 所有展示的赛事数据与赔率均以平台页面实时显示为准，第三方整理可能存在延迟或偏差，建议交叉核对。
+            </div>
+            <div class="note-box">
+                <i>🔹 账户安全</i> —— 请始终通过官方渠道访问 <a href="https://cnx-bet365.com">bet365</a>，避免使用第三方镜像或非正规入口。定期检查登录设备与授权。
+            </div>
+            <div class="note-box">
+                <i>🔹 合规前提</i> —— 不同司法管辖区对在线相关服务有不同规定，使用前请自行了解本地法律。本页仅作信息索引，不构成任何操作建议。
+            </div>
+            <div class="note-box" style="border-left-color:#6b7f94;">
+                <i>🔹 资料时效</i> —— 本页内容基于 2024–2025 年公开信息整理，界面与功能可能随版本更新调整。
+            </div>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="card">
+            <h2 style="font-weight:500; font-size:1.25rem; margin-bottom:0.5rem; color:#1a232e;">▎常见疑问摘要</h2>
+            <div class="faq-item">
+                <div class="faq-question">注册必须提供完整身份资料吗？</div>
+                <div class="faq-answer">是的，几乎所有合规运营商都要求完成实名验证（KYC），这也是平台保障账户安全的基础流程。请准备好有效证件与地址证明。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">平台支持哪些货币结算？</div>
+                <div class="faq-answer">这取决于账户注册时所选的区域及货币类型。主流选项包括美元、欧元、英镑及部分亚洲货币。具体以 <a href="https://cnx-bet365.com">bet365</a> 后台显示为准。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">数据更新频率如何？</div>
+                <div class="faq-answer">赛前数据通常每 15–30 秒刷新一次； 实时比赛阶段数据变化频率更高（逐秒更新）。网络环境与设备性能可能影响同步速度。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">有没有操作教程或指南？</div>
+                <div class="faq-answer">平台帮助中心提供界面导航与规则说明。此外，部分用户制作了非官方的操作截图指南，但请注意甄别时效性与准确性。</div>
+            </div>
+        </div>
+
+        <!-- 简洁说明与尾注 -->
+        <div class="footer-meta">
+            本页面为独立整理的资料索引，与 bet365 官方无附属关系。信息仅供个人参考。
+        </div>
+    </div>
+</body>
+</html>
